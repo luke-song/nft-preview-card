@@ -36,9 +36,11 @@ body {
 main {
   background-color: var(--VeryDarkBlueCardBG);
   border-radius: 1rem;
-  width: 30svw;
+  width: 25svw;
   padding: 2rem;
   margin-top: 10%;
+  box-shadow: 0px 20px 0px 15px rgba(0, 0, 0, 0.05),
+    0px 30px 0px 50px rgba(0, 0, 0, 0.05);
 }
 
 .card-container {
@@ -55,6 +57,10 @@ main {
   margin-bottom: 1rem;
 }
 
+.card-image:hover {
+  opacity: 0.4;
+}
+
 h1 {
   color: var(--White);
   align-self: start;
@@ -62,16 +68,19 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h1:hover {
+  color: var(--Cyan);
+}
+
 h2 {
   color: var(--SoftBlue);
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
-  margin-bottom: 1rem;
 }
 
 h3 {
   color: var(--White);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -86,11 +95,15 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .eth-footer .price {
+  display: flex;
   position: relative;
   color: var(--Cyan);
+  margin-top: 0;
+  align-items: center;
 }
 
 .eth-footer .price::before {
@@ -98,16 +111,18 @@ hr {
   background-image: url(../images/icon-ethereum.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 11px;
+  width: 15px;
   height: 20px;
   display: inline-block;
   margin-right: 5px;
 }
 
 .eth-footer .days-left {
+  display: flex;
   position: relative;
+  align-items: center;
   color: var(--SoftBlue);
-  top: 2px;
+  margin-top: 0;
 }
 
 .eth-footer .days-left::before {
@@ -125,6 +140,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: left;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -136,4 +152,8 @@ hr {
 
 .user-footer .name {
   color: var(--White);
+}
+
+.user-footer .name:hover {
+  color: var(--Cyan);
 }
