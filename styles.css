@@ -1,0 +1,139 @@
+/* - Mobile: 375px */
+/* - Desktop: 1440px */
+
+/* - Font size (paragraph): 18px */
+
+/* - Family: [Outfit](https://fonts.google.com/specimen/Outfit) */
+/* - Weights: 300, 400, 600 */
+
+:root {
+  /* ### Primary */
+  --SoftBlue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* ### Neutral */
+  --VeryDarkBlueMainBG: hsl(217, 54%, 11%);
+  --VeryDarkBlueCardBG: hsl(216, 50%, 16%);
+  --VeryDarkBlueLline: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  font-family: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--VeryDarkBlueMainBG);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+main {
+  background-color: var(--VeryDarkBlueCardBG);
+  border-radius: 1rem;
+  width: 30svw;
+  padding: 2rem;
+  margin-top: 10%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--White);
+  align-self: start;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--SoftBlue);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--White);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid var(--VeryDarkBlueLline);
+  margin: 1rem 0;
+}
+
+.eth-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eth-footer .price {
+  position: relative;
+  color: var(--Cyan);
+}
+
+.eth-footer .price::before {
+  content: "";
+  background-image: url(../images/icon-ethereum.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 11px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.eth-footer .days-left {
+  position: relative;
+  color: var(--SoftBlue);
+  top: 2px;
+}
+
+.eth-footer .days-left::before {
+  content: "";
+  background-image: url(./images/icon-clock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.user-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.user-footer img {
+  max-width: 35px;
+  border: white 2px solid;
+  border-radius: 50%;
+}
+
+.user-footer .name {
+  color: var(--White);
+}
